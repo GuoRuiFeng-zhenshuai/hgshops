@@ -12,7 +12,7 @@ import com.bawei.hgshop.pojo.SpecOption;
  */
 public interface SpecDao {
 
-	List<Spec> list(String name);
+	List<Spec> list( String name);
 
 	int addSpec(Spec spec);
 
