@@ -1,7 +1,5 @@
 package com.bawei.hgshop.controller;
 
-import java.util.Locale;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.dubbo.config.annotation.Reference;
@@ -13,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bawei.hgshop.pojo.Spec;
 import com.bawei.hgshop.service.SpecService;
 import com.github.pagehelper.PageInfo;
+
 
 /**
  * 
@@ -70,9 +69,9 @@ public class SpecController {
 		spec.getOptions().removeIf(x->{return x.getOptionName()==null;});
 		System.out.println("spec 处理后：" + spec);
 		//调用服务
-		int add = specService.update(spec);  
-		//return add>0?"success":"false";
-		return "fail";
+		int result = specService.update(spec);  
+		return result >0 ?"success":"false";
+		//return "fail";
 	}
 	
 	

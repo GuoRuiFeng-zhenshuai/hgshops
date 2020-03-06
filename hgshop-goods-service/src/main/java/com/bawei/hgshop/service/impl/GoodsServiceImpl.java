@@ -2,6 +2,10 @@ package com.bawei.hgshop.service.impl;
 
 import java.util.List;
 
+import org.apache.dubbo.config.annotation.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bawei.hgshop.dao.CategoryDao;
 import com.bawei.hgshop.pojo.Brand;
 import com.bawei.hgshop.pojo.Category;
 import com.bawei.hgshop.service.GoodsService;
@@ -12,7 +16,11 @@ import com.github.pagehelper.PageInfo;
  * @author zhuzg
  *
  */
+@Service(interfaceClass=GoodsService.class)
 public class GoodsServiceImpl  implements GoodsService{
+	
+	@Autowired
+	CategoryDao catDao;
 
 	@Override
 	public int addBrand(Brand brand) {
@@ -42,21 +50,24 @@ public class GoodsServiceImpl  implements GoodsService{
 	@Override
 	public int addCategory(Category category) {
 		// TODO Auto-generated method stub
-		return 0;
+		return catDao.add(category);
 	}
-
+ 
 	@Override
 	public int updateCategory(Category category) {
 		// TODO Auto-generated method stub
-		return 0;
+		return catDao.update(category);
 	}
 
 	@Override
 	public int deleteCategory(Integer id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return catDao.delete(id);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public PageInfo<Category> listCategory(String firstChar, int page) {
 		// TODO Auto-generated method stub
@@ -66,7 +77,7 @@ public class GoodsServiceImpl  implements GoodsService{
 	@Override
 	public List<Category> treeCategory() {
 		// TODO Auto-generated method stub
-		return null;
+		return catDao.tree();
 	}
 
 }
