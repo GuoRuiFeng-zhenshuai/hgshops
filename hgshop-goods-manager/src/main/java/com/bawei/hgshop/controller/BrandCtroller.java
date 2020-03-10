@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 品牌管理
- * @author zhuzg
+ * @author zhuzg 
  *
  */
 @Controller

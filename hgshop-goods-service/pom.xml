@@ -175,13 +175,26 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
+			<!-- <version>1.0.0.RC1</version> -->
 		</dependency>
+		
 		<dependency>
 			<groupId>com.bw.hgshop</groupId>
 			<artifactId>hgshop-goods-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
   </dependencies>
+  
+<!--   <repositories>
+	    <repository>Spring-kafka的资源库地址
+	        <id>spring-milestones</id>
+	        <name>Spring Milestones</name>
+	        <url>https://repo.spring.io/libs-milestone</url>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories> -->
 
 	<build>
 		<plugins>

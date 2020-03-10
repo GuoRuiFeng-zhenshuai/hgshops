@@ -53,6 +53,7 @@
 <script>
 function initTree() {
 	//发送ajax获取树需要的数据
+	alert($.ajaxSettings.async=true)
 	$.post("/cat/treeData", {},
 			function(treeData) {
 				//初始化添加的时候分类的树

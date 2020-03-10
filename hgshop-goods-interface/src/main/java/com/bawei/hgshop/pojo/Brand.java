@@ -17,6 +17,7 @@ public class Brand implements Serializable{
 	private String name        ;
 	private String firstChar  ;
 	private int deletedFlag;
+	
 	public Integer getId() {
 		return id;
 	}

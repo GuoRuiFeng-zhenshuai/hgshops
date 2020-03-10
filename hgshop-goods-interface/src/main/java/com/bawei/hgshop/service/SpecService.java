@@ -1,5 +1,7 @@
 package com.bawei.hgshop.service;
 
+import java.util.List;
+
 import com.bawei.hgshop.pojo.Spec;
 import com.github.pagehelper.PageInfo;
 
@@ -11,6 +13,15 @@ import com.github.pagehelper.PageInfo;
 public interface SpecService {
 	
 	PageInfo<Spec> list(String name,int page);
+	
+	
+	/**
+	 * 获取所有的规格名称
+	 * @param name
+	 * @param page
+	 * @return
+	 */
+	List<Spec> listAll();
 	
 	int add(Spec spec);
 	

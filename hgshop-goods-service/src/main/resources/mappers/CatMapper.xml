@@ -17,6 +17,10 @@ path
 	select * from hg_category where parent_id=#{value}
 </select>
 
+<select id="findById" resultType="Category">
+	select id,name,path from hg_category where id=#{value}	
+</select>
+
 <select id="tree" resultMap="catMapper">
 	select * from hg_category where parent_id=0
 </select>

@@ -1,5 +1,7 @@
 package com.bawei.hgshop.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.dubbo.config.annotation.Reference;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.bawei.hgshop.pojo.Spec;
+import com.bawei.hgshop.pojo.SpecOption;
 import com.bawei.hgshop.service.SpecService;
 import com.github.pagehelper.PageInfo;
 
@@ -88,7 +91,6 @@ public class SpecController {
 		return specService.findById(id);
 		
 	}
-	
 	
 	/**
 	 * 删除规格
